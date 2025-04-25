@@ -1,0 +1,1156 @@
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning
+$ echo "# Bank_App" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/MohammedMiskeenAli/Bank_App.git
+git push -u origin main
+Initialized empty Git repository in E:/Git & Github Workshop/Learning/.git/
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the nex
+t time Git touches it
+[master (root-commit) 00c2390] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 219 bytes | 219.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/MohammedMiskeenAli/Bank_App.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo1.py
+        Demo1.py.bak
+        Demo2.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git add Demo1.py
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Demo1.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo1.py.bak
+        Demo2.java
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git commit -m "First Commit"
+[main 60a95a6] First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Demo1.py
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo1.py.bak
+        Demo2.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 313 bytes | 313.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/MohammedMiskeenAli/Bank_App.git
+   00c2390..60a95a6  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo1.py.bak
+        Demo2.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git add .
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Demo1.py.bak
+        new file:   Demo2.java
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git commit -m "Demo files added"
+[main 8400089] Demo files added
+ 2 files changed, 7 insertions(+)
+ create mode 100644 Demo1.py.bak
+ create mode 100644 Demo2.java
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 442 bytes | 147.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/MohammedMiskeenAli/Bank_App.git
+   60a95a6..8400089  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git log
+commit 84000891a1b36bc4cd16f1283f9b63318505044f (HEAD -> main, origin/main)
+Author: iammiskeen <info.miskeen@gmail.com>
+Date:   Thu Apr 24 22:38:59 2025 +0530
+
+    Demo files added
+
+commit 60a95a6c9d2fd7379afff09a470eeee8ea1a07c8
+Author: iammiskeen <info.miskeen@gmail.com>
+Date:   Thu Apr 24 21:45:30 2025 +0530
+
+    First Commit
+
+commit 00c239013ce03f275ab41af6fea386cb3ef92d23
+Author: iammiskeen <info.miskeen@gmail.com>
+Date:   Thu Apr 24 21:40:44 2025 +0530
+
+    first commit
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ touch Demo.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git restore Demo.c
+error: pathspec 'Demo.c' did not match any file(s) known to git
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git restore Demo
+error: pathspec 'Demo' did not match any file(s) known to git
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git restore "Demo.c"
+error: pathspec 'Demo.c' did not match any file(s) known to git
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git restore "Demo.c"
+error: pathspec 'Demo.c' did not match any file(s) known to git
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git restore Demo.c
+error: pathspec 'Demo.c' did not match any file(s) known to git
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git add Demo.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Demo.c
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git restore Demo.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Demo.c
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Demo.c
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Demo2.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo2.java.bak
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git restore Demo2.java
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Demo.c
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo2.java.bak
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git commit -m "C file added"
+[main 0674663] C file added
+ 1 file changed, 8 insertions(+)
+ create mode 100644 Demo.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 320 bytes | 320.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/MohammedMiskeenAli/Bank_App.git
+   8400089..0674663  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo2.java.bak
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git add Demo2.java.bak
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git commit -m "Required files added"
+[main 3d7ab29] Required files added
+ 1 file changed, 7 insertions(+)
+ create mode 100644 Demo2.java.bak
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 245 bytes | 245.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/MohammedMiskeenAli/Bank_App.git
+   0674663..3d7ab29  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Demo1.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git restore Demo1.py
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Demo1.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git add Demo1.py
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Demo1.py
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git restore --staged Demo1.py
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Demo1.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git add Demo1.py
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git commit -m "Changes added"
+[main d6852e8] Changes added
+ 1 file changed, 1 insertion(+)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 301 bytes | 301.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/MohammedMiskeenAli/Bank_App.git
+   3d7ab29..d6852e8  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git rm Demo.c
+rm 'Demo.c'
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    Demo.c
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git commit -m "C file deleted"
+[main 5e5ac40] C file deleted
+ 1 file changed, 8 deletions(-)
+ delete mode 100644 Demo.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 222 bytes | 222.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/MohammedMiskeenAli/Bank_App.git
+   d6852e8..5e5ac40  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git rm Demo.c
+fatal: pathspec 'Demo.c' did not match any files
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git rm
+fatal: No pathspec was given. Which files should I remove?
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git rm Demo.c
+fatal: pathspec 'Demo.c' did not match any files
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ touch Demo3.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo3.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git rm Demo3.c
+fatal: pathspec 'Demo3.c' did not match any files
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git rm "Demo3.c"
+fatal: pathspec 'Demo3.c' did not match any files
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ ls
+Demo1.py  Demo1.py.bak  Demo2.java  Demo2.java.bak  Demo3.c  README.md
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ rm Demo.c
+rm: cannot remove 'Demo.c': No such file or directory
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ rm Demo3.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ touch demo3.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo3.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git add demo3.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git commit -m "C file added"
+[main cf08704] C file added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 demo3.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 259 bytes | 259.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/MohammedMiskeenAli/Bank_App.git
+   5e5ac40..cf08704  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git rm demo3.c
+rm 'demo3.c'
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    demo3.c
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git commit -m "c file deleted"
+[main 3c782ca] c file deleted
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 demo3.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 220 bytes | 220.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/MohammedMiskeenAli/Bank_App.git
+   cf08704..3c782ca  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ git clone https://github.com/MohammedMiskeenAli/practice.git
+Cloning into 'practice'...
+remote: Enumerating objects: 39, done.
+remote: Counting objects: 100% (39/39), done.
+remote: Compressing objects: 100% (30/30), done.
+remote: Total 39 (delta 12), reused 22 (delta 6), pack-reused 0 (from 0)
+Receiving objects: 100% (39/39), 7.21 KiB | 671.00 KiB/s, done.
+Resolving deltas: 100% (12/12), done.
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning (main)
+$ cd practice
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 947 bytes | 86.00 KiB/s, done.
+From https://github.com/MohammedMiskeenAli/practice
+   d3dd374..381f08a  main       -> origin/main
+Updating d3dd374..381f08a
+Fast-forward
+ Module.py | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Hello.java
+        modified:   Hello.java.bak
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git restore Hello.java
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Hello.java.bak
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Hello.java
+        modified:   Hello.java.bak
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git add .
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git commit -m "Code updated"
+[main 5d0d785] Code updated
+ 2 files changed, 4 insertions(+), 10 deletions(-)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 373 bytes | 186.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/MohammedMiskeenAli/practice.git
+   381f08a..5d0d785  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Hello.java
+        modified:   Hello.java.bak
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git add .
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git commit -m "Bug fix-2020"
+[main 04d2140] Bug fix-2020
+ 2 files changed, 2 insertions(+), 8 deletions(-)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git push
+To https://github.com/MohammedMiskeenAli/practice.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/MohammedMiskeenAli/practi
+ce.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.02 KiB | 130.00 KiB/s, done.
+From https://github.com/MohammedMiskeenAli/practice
+   5d0d785..a53c976  main       -> origin/main
+Auto-merging Hello.java
+CONFLICT (content): Merge conflict in Hello.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main|MERGING)
+$ git add .
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main|MERGING)
+$ git commit -m "Bug fix-2020"
+[main 3b42b1e] Bug fix-2020
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 807 bytes | 403.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/MohammedMiskeenAli/practice.git
+   a53c976..3b42b1e  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Hello.java
+        modified:   Hello.java.bak
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git add .
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git commit -m "Big rectified"
+[main 6615056] Big rectified
+ 2 files changed, 8 insertions(+), 8 deletions(-)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git push
+To https://github.com/MohammedMiskeenAli/practice.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/MohammedMiskeenAli/practi
+ce.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.03 KiB | 44.00 KiB/s, done.
+From https://github.com/MohammedMiskeenAli/practice
+   3b42b1e..f97c873  main       -> origin/main
+Auto-merging Hello.java
+CONFLICT (content): Merge conflict in Hello.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main|MERGING)
+$ git add .
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main|MERGING)
+$ git commit -m "Big rectified"
+[main 3005cc3] Big rectified
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 845 bytes | 422.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/MohammedMiskeenAli/practice.git
+   f97c873..3005cc3  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Hello.java
+        modified:   Hello.java.bak
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git add .
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git commit -m "Big rectified"
+[main 4731e8d] Big rectified
+ 2 files changed, 7 insertions(+), 9 deletions(-)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 408 bytes | 408.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/MohammedMiskeenAli/practice.git
+   3005cc3..4731e8d  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Hello.java
+        modified:   Hello.java.bak
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git add .
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git commit -m "Bug rectified-2020"
+[main df87a9f] Bug rectified-2020
+ 2 files changed, 3 insertions(+), 7 deletions(-)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git push
+To https://github.com/MohammedMiskeenAli/practice.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/MohammedMiskeenAli/practi
+ce.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.01 KiB | 49.00 KiB/s, done.
+From https://github.com/MohammedMiskeenAli/practice
+   4731e8d..613c8f9  main       -> origin/main
+Auto-merging Hello.java
+CONFLICT (content): Merge conflict in Hello.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main|MERGING)
+$ git add .
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main|MERGING)
+$ git commit -m "Bug rectified-2020"
+[main 92a2791] Bug rectified-2020
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git push
+Enumerating objects: 13, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 905 bytes | 452.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/MohammedMiskeenAli/practice.git
+   613c8f9..92a2791  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ touch Demo.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Demo.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git add .
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git commit -m "File C created"
+[main a7f735e] File C created
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Demo.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 270 bytes | 135.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/MohammedMiskeenAli/practice.git
+   f85e127..a7f735e  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ touch Demo1.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git add .
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Demo1.c
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git restote --staged Demo1.c
+git: 'restote' is not a git command. See 'git --help'.
+
+The most similar command is
+        restore
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Demo1.c
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$  restote --staged Demo1.c
+bash: restote: command not found
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Demo1.c
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git restore Demo1.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Demo1.c
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git commit -m "File C unstaged"
+[main 93e4c62] File C unstaged
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Demo1.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 233 bytes | 233.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/MohammedMiskeenAli/practice.git
+   a7f735e..93e4c62  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git rm Demo.c
+rm 'Demo.c'
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git commit -m "File C unstaged"
+[main 5d13f25] File C unstaged
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 Demo.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 224 bytes | 224.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/MohammedMiskeenAli/practice.git
+   93e4c62..5d13f25  main -> main
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Demo1.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git restore Demo1.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Demo1.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git add .
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Demo1.c
+
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git restore --staged Demo1.c
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Demo1.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+CSE-22@CSE-22 MINGW64 /e/Git & Github Workshop/Learning/practice (main)
+$
+
